@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #333;
+}
+
 #traffic-light {
   height: 550px;
   width: 200px;

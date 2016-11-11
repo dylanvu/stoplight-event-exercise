@@ -9,15 +9,31 @@
   const slowLight = document.querySelector('#slowLight');
   const goLight = document.querySelector('#goLight');
 
-  const createLightEventListener = (button, light, color) => {
+  const createButtonEvents = (button, light, className) => {
+    button.addEventListener('mouseover', () => {
+      console.log(`Entered ${button.textContent} button`);
+    });
+    button.addEventListener('mouseout', () => {
+      console.log(`Left ${button.textContent} button`);
+    });
     button.addEventListener('click', () => {
-    stopLight.style.backgroundColor = 'black';
-    slowLight.style.backgroundColor = 'black';
-    goLight.style.backgroundColor = 'black';
-    light.style.backgroundColor = color;
-  })}
+      console.log(button.textContent);
+      stopLight.classList.toggle('stop', false);
+      slowLight.classList.toggle('slow', false);
+      goLight.classList.toggle('go', false);
+      light.classList.toggle(className);
+      // button.addEventListener('click', () => {
+      //   if (light.classList.contains(className)) {
+      //     light.classList.toggle(className);
+      //   }
+      //   else {
+      //     light.classList.toggle(className);
+      //   }
+      // });
+    });
+  };
 
-  createLightEventListener(stopButton, stopLight, 'red');
-  createLightEventListener(slowButton, slowLight, 'orange');
-  createLightEventListener(goButton, goLight, 'lightgreen');
+  createButtonEvents(stopButton, stopLight, 'stop');
+  createButtonEvents(slowButton, slowLight, 'slow');
+  createButtonEvents(goButton, goLight, 'go');
 })();

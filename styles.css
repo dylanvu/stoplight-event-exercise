@@ -35,3 +35,18 @@
   margin: 25px auto;
   transition: background 500ms;
 }
+
+.stop {
+  background-color: red;
+  box-shadow: 10px 10px 140px 0px red;
+}
+
+.slow {
+  background-color: yellow;
+  box-shadow: 10px 10px 140px 0px yellow;
+}
+
+.go {
+  background-color: green;
+  box-shadow: 10px 10px 140px 0px green;
+}

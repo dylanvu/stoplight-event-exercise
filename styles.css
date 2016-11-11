@@ -38,15 +38,15 @@
 
 .stop {
   background-color: red;
-  box-shadow: 10px 10px 140px 0px red;
+  box-shadow: 10px 10px 140px 0px red, inset 0px 0px 80px -12px rgba(0,0,0,1);;
 }
 
 .slow {
   background-color: yellow;
-  box-shadow: 10px 10px 140px 0px yellow;
+  box-shadow: 10px 10px 140px 0px yellow, inset 0px 0px 80px -12px rgba(0,0,0,1);;
 }
 
 .go {
   background-color: green;
-  box-shadow: 10px 10px 140px 0px green;
+  box-shadow: 10px 10px 140px 0px green, inset 0px 0px 80px -12px rgba(0,0,0,1);;
 }

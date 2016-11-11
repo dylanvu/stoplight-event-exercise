@@ -9,43 +9,33 @@
   const slowLight = document.querySelector('#slowLight');
   const goLight = document.querySelector('#goLight');
 
-  const mouseoverEvent = (button) => {
-    button.addEventListener('mouseover', () => {
+  const wireupMouseenterEvent = (button) => {
+    button.addEventListener('mouseenter', () => {
       console.log(`Entered ${button.textContent} button`);
     });
   }
 
-  const mouseoutEvent = (button) => {
-    button.addEventListener('mouseout', () => {
+  const wireupMouseleaveEvent = (button) => {
+    button.addEventListener('mouseleave', () => {
       console.log(`Left ${button.textContent} button`);
     });
   }
 
-  const clickEvent = (button, light, className) => {
+  const wireupClickEvent = (button, light, className) => {
     button.addEventListener('click', () => {
       console.log(button.textContent);
-      stopLight.classList.toggle('stop', false);
-      slowLight.classList.toggle('slow', false);
-      goLight.classList.toggle('go', false);
-      light.classList.toggle(className);
+      stopLight.classList.remove('stop');
+      slowLight.classList.remove('slow');
+      goLight.classList.remove('go');
+      light.classList.add(className);
     });
   }
 
   const createButtonEvents = (button, light, className) => {
-    mouseoverEvent(button);
-    mouseoutEvent(button);
-    clickEvent(button, light, className);
+    wireupMouseenterEvent(button);
+    wireupMouseleaveEvent(button);
+    wireupClickEvent(button, light, className);
   };
-
-  // Toggle on and off
-  // button.addEventListener('click', () => {
-  //   if (light.classList.contains(className)) {
-  //     light.classList.toggle(className);
-  //   }
-  //   else {
-  //     light.classList.toggle(className);
-  //   }
-  // });
 
   createButtonEvents(stopButton, stopLight, 'stop');
   createButtonEvents(slowButton, slowLight, 'slow');

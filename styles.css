@@ -34,19 +34,20 @@
   border-radius: 50%;
   margin: 25px auto;
   transition: background 500ms;
+  box-shadow: inset 0px 0px 80px -12px rgba(0,0,0,1);
 }
 
 .stop {
   background-color: red;
-  box-shadow: 10px 10px 140px 0px red, inset 0px 0px 80px -12px rgba(0,0,0,1);;
+  box-shadow: 10px 10px 300px 0px red, inset 0px 0px 80px -12px rgba(0,0,0,1);
 }
 
 .slow {
   background-color: yellow;
-  box-shadow: 10px 10px 140px 0px yellow, inset 0px 0px 80px -12px rgba(0,0,0,1);;
+  box-shadow: 10px 10px 300px 0px yellow, inset 0px 0px 80px -12px rgba(0,0,0,1);
 }
 
 .go {
-  background-color: green;
-  box-shadow: 10px 10px 140px 0px green, inset 0px 0px 80px -12px rgba(0,0,0,1);;
+  background-color: #00FF00;
+  box-shadow: 10px 10px 300px 0px #00FF00, inset 0px 0px 80px -12px rgba(0,0,0,1);
 }
